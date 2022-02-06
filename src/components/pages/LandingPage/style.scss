@@ -1,0 +1,95 @@
+#landing-page {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("../../../assets/images/black-bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  > * {
+    position: relative;
+    z-index: 10;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    z-index: 9;
+  }
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > * {
+      height: 50%;
+    }
+  }
+
+  section.auth {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+
+    > section {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 1rem;
+    }
+  }
+}
+
+#landing-page .chat-illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 100%;
+    padding: 2rem 2rem 0;
+  }
+}
+
+#landing-page .landing > main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  header {
+    h1 {
+      text-shadow: 1px 1px 2px rgba($color: #fff, $alpha: 0.8);
+      font-size: 2.8em;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #landing-page {
+    .landing {
+      display: flex;
+      flex-direction: row;
+
+      > * {
+        width: 50%;
+        height: 100%;
+      }
+    }
+  }
+
+  #landing-page .landing > main {
+    align-items: flex-start;
+    text-align: left;
+  }
+}

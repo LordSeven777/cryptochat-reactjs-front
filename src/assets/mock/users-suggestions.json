@@ -1,0 +1,26 @@
+[
+  {
+    "userID": "kjhsdfkdf",
+    "firstName": "Tolojanahary",
+    "lastName": "Fenomanantsoa",
+    "gender": "M",
+    "photoURL": null,
+    "online": 1,
+    "hidden": 0
+  },
+  {
+    "userID": "efzefsdsdf",
+    "firstName": "Manandraisoa",
+    "lastName": "Hélène",
+    "gender": "F",
+    "photoURL": null,
+    "online": 0,
+    "hidden": 0
+  },
+  {
+    "userID": "afsdfdffdfds",
+    "pseudo": "Tixie45",
+    "online": 1,
+    "hidden": 1
+  }
+]

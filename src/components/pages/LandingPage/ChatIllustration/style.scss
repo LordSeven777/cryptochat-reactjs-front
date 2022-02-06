@@ -1,0 +1,23 @@
+#landing-page .chat-illustration {
+  g#chat-bullet-1 {
+    animation: bullet_animation 3s ease 0.5s infinite alternate-reverse;
+  }
+}
+
+@keyframes bullet_animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0.05, 0.05);
+  }
+  50% {
+    transform: translate(0.1, 0);
+  }
+  75% {
+    transform: translate(0.05, -0.05);
+  }
+  100% {
+    transform: translate(1, -1);
+  }
+}

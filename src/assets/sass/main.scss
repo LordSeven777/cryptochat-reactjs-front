@@ -1,0 +1,79 @@
+@import "./globals";
+
+// Global styling
+p,
+span,
+h6,
+h2,
+h3,
+h4,
+h5,
+h6,
+div {
+  color: white;
+}
+
+// Global default settings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Global classes
+
+.font-weight-semi-bold {
+  font-weight: 600;
+}
+
+.blur-white-bg {
+  @include blurWhiteBg;
+}
+
+.blur-white-bg-hover {
+  transition: 0.4s;
+
+  &:hover {
+    @include blurWhiteBg;
+    transition: 0.4s;
+  }
+}
+
+input.app-input,
+textarea.app-input {
+  color: #fff;
+  background-color: $input-glass-color;
+  border-color: #818587;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &::placeholder {
+    color: #fff;
+  }
+
+  &:focus {
+    border-color: $primary;
+    background-color: #000;
+    transition: 0.3s;
+    color: #fff;
+    cursor: text;
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+    transition: 0.4s;
+  }
+}
+
+.bg-dark-1 {
+  background-color: $dark-1;
+}
+
+.bg-dark-2 {
+  background-color: $dark-2;
+}
+
+// Font-weight 600
+.fw-600 {
+  font-weight: 600;
+}

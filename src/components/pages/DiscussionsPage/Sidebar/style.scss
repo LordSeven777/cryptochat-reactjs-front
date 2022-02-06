@@ -1,0 +1,44 @@
+@import "../../../../assets/sass/variables";
+
+#discussions-sidebar {
+  height: 100vh;
+  width: 100%;
+
+  .discussions-sidebar-simplebar {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    .simplebar-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    .simplebar-scrollbar::before {
+      background-color: #fff;
+    }
+  }
+
+  .discussions-sidebar-wrapper {
+    min-height: 100%;
+  }
+
+  .upper {
+    border-bottom: 1px solid $border-color;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: $split-sb-breakpoint) {
+  #discussions-sidebar {
+    width: 360px;
+    border-right: 1px solid $border-color;
+  }
+}

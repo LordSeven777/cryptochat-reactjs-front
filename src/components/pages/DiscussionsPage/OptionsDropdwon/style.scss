@@ -1,0 +1,60 @@
+@import "../../../../assets/sass/variables";
+
+@mixin transparent-hover {
+  background-color: rgba(255, 255, 255, 0);
+  transition: 0.3s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+#options-dropdown {
+  position: relative;
+  height: auto;
+
+  .toggler {
+    position: relative;
+
+    .badge {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    border: 1px solid $border-color;
+    width: 230px;
+    z-index: 10;
+
+    a {
+      display: block;
+      color: #fff;
+      font-weight: 600;
+      @include transparent-hover;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .toggle-visibility {
+      @include transparent-hover;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .sign-out {
+      font-weight: 600;
+    }
+  }
+
+  hr {
+    background-color: $border-color;
+    margin: 0.5rem;
+  }
+}

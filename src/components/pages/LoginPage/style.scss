@@ -1,0 +1,15 @@
+#login-page {
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    position: relative;
+
+    .spinner-border {
+      position: absolute;
+      top: 0.6rem;
+      right: 0.4rem;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "../../../../assets/sass/variables";
+
+#active-users-suggestions {
+  $controller-width: 40px;
+
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+
+  .controller {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #ababab;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 3;
+    opacity: 0;
+    outline: none;
+
+    &:hover {
+      background-color: #fff;
+      color: $primary;
+    }
+
+    &.forward {
+      right: 0;
+    }
+
+    &.backward {
+      left: 0;
+    }
+  }
+
+  .frame {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+
+    &::after {
+      content: "";
+      transition: 0.5s;
+      opacity: 0;
+      width: 30px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2)
+      );
+    }
+
+    &::before {
+      content: "";
+      transition: 0.5s;
+      opacity: 0;
+      width: 30px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+    }
+
+    &.hide-left {
+      &::before {
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .controller.backward {
+        display: flex;
+        opacity: 1;
+      }
+    }
+
+    &.hide-right {
+      &::after {
+        opacity: 1;
+        transition: 0.5s;
+      }
+
+      .controller.forward {
+        display: flex;
+        opacity: 1;
+      }
+    }
+  }
+
+  .wrapper {
+    padding-left: 20px;
+    width: fit-content;
+    transition: 0.5s;
+  }
+}

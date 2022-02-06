@@ -1,0 +1,29 @@
+@import "../../../assets/sass/variables";
+
+#discussion-page {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  &.open {
+    display: flex;
+  }
+
+  .discussion-body {
+    position: relative;
+    background-image: url("../../../assets/images/bits-bg.png");
+    background-position: center;
+    height: calc(100vh - 4.375rem);
+  }
+}
+
+@media screen and (min-width: $split-sb-breakpoint) {
+  #discussion-page {
+    position: relative;
+    width: auto;
+    display: flex;
+  }
+}

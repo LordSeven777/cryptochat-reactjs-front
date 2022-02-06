@@ -1,0 +1,43 @@
+@import "../../../../assets/sass/variables";
+
+#discussion-page .form-section {
+  height: 3.75rem;
+  max-height: 4.375rem;
+  background-color: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(3px);
+  position: relative;
+
+  > .wrapper {
+    border-top: 1px solid $border-color;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    height: auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    padding-bottom: 11px;
+  }
+
+  #message-form {
+    width: 100%;
+
+    button.pick-photo {
+      font-size: 1.2rem;
+    }
+
+    button.send-message {
+      color: #fff;
+
+      svg {
+        transform: rotate(50deg);
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+}

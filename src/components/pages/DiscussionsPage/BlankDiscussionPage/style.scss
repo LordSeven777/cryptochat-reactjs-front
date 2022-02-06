@@ -1,0 +1,14 @@
+@import "../../../../assets/sass/variables";
+
+#discussions-page .blank-discussion {
+  display: none;
+  height: 100%;
+}
+
+@media screen and (min-width: $split-sb-breakpoint) {
+  #discussions-page .blank-discussion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

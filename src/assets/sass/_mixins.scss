@@ -1,0 +1,22 @@
+// Blurred Transparent white background color
+@mixin blurWhiteBg($opacity: 0.4) {
+  background-color: rgba(255, 255, 255, $opacity);
+  backdrop-filter: blur(5px);
+}
+
+// Sets as full screen
+@mixin fullScreen($z-index: 1000) {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $z-index;
+}
+
+// Ellipsis on text overflow
+@mixin textOverflowEllipsis {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,56 @@
+@import "../../../../assets/sass/variables";
+
+#discussion-page .upper-bar {
+  width: 100%;
+  background: #000;
+  height: 4.375rem;
+  border-bottom: 1px solid $border-color;
+
+  #hide-discussion {
+    position: relative;
+    left: -0.7rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    transition: 0.3s;
+    padding-right: 0.3rem;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  #toggle-options {
+    font-size: 1.3rem;
+    color: #fff;
+
+    &.open {
+      color: $primary;
+    }
+  }
+
+  .d-avatar {
+    height: 50px;
+    width: 50px;
+  }
+
+  p.name {
+    min-width: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  p.active-status {
+    color: $active-color;
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: $split-sb-breakpoint) {
+  #discussion-page .upper-bar {
+    #hide-discussion {
+      display: none;
+    }
+  }
+}
